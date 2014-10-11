@@ -13,7 +13,20 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	// $painting = new Painting;
+	// $painting->title = 'Do No Wrong';
+	// $painting->artist = 'D. DoRight';
+	// $painting->year = 2014;
+	// $painting->save();
+
+	// return View::make('hello');
+
+	$painting = Painting::find(1);
+
+	$painting->title = "Do No Wrong - Just Do Right";
+	$painting->save();
+
+	return $painting->title;
 });
 
 Route::get('about',function(){
