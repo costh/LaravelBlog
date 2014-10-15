@@ -16,6 +16,11 @@ Route::get('/',[
 	'uses' => 'HomeController@index'
 	]);
 
+Route::get('/posts/{slug}',[
+	'as' => 'post-show',
+	'uses' => 'PostController@getShow'
+	]);
+
 
 
 

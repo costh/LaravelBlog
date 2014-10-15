@@ -17,7 +17,9 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
-		return View::make('home');
+		$posts = Post::where('draft','=',0)-> get(); //querying the database specifying what to get from which column
+
+		return View::make('home')->with('posts',$posts);
 	}
 
 }
