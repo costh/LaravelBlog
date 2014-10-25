@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Blog</title>
+		<title>@yield('title') | Blog</title>
 	</head>
 
 	<body>
