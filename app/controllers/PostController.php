@@ -33,14 +33,6 @@ class PostController extends \BaseController {
 		//
 	}
 
-	public static function convertSlug($string){
-
-		$string = strtolower($str);
-		$string = str_replace(' ', '_', $string);
-		return $string;
-	}
-
-
 	/**
 	 * Store a newly created resource in storage.
 	 *
@@ -57,7 +49,7 @@ class PostController extends \BaseController {
 			$post = new Post;
             $post->title = Input::get('title');
             $post->draft = Input::get('type');
-            $post->slug = Input::get('title')."_".Input::get('title');
+            $post->slug = Slugify::slugify(Input::get('title'));
             $post->body =  Input::get('body');
             
             if($post->save()){

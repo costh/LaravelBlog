@@ -121,7 +121,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'MaxHoffmann\Parsedown\ParsedownServiceProvider'
+		'MaxHoffmann\Parsedown\ParsedownServiceProvider',
+		'Cocur\Slugify\Bridge\Laravel\SlugifyServiceProvider'
 
 	),
 
@@ -190,6 +191,7 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Markdown'        => 'MaxHoffmann\Parsedown\ParsedownFacade',
+		'Slugify' => 'Cocur\Slugify\Bridge\Laravel\SlugifyFacade'
 
 	),
 

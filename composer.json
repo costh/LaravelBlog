@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"maxhoffmann/parsedown-laravel": "dev-master"
+		"maxhoffmann/parsedown-laravel": "dev-master",
+		"cocur/slugify": "@stable"
 	},
 	"autoload": {
 		"classmap": [
