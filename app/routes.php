@@ -16,10 +16,15 @@ Route::get('/',[
 	'uses' => 'HomeController@index'
 	]);
 
+Route::get('/newpost','PostController@getView_newPost');
+
 Route::get('/posts/{slug}',[
 	'as' => 'post-show',
 	'uses' => 'PostController@getShow'
 	]);
+
+Route::resource('posts', 'PostController');
+
 
 
 
